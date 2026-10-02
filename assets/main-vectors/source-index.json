@@ -1,0 +1,59 @@
+{
+  "referenceOnly": true,
+  "note": "Original main render sequences were replaced by native SVG geometry. The fully occluded sample seq-03 is not part of the visible main.",
+  "sequences": [
+    {
+      "key": "seq-00",
+      "ids": [
+        "62a8e79f2fbc60001b684c9b",
+        "62a8de6d3c08b6003ef2bd6a"
+      ],
+      "frames": 200,
+      "width": 3840,
+      "height": 10000,
+      "runtime": "native-svg"
+    },
+    {
+      "key": "seq-01",
+      "ids": [
+        "62a8e79f2fbc60001b684c9e",
+        "62a8de6d3c08b6003ef2bd6d"
+      ],
+      "frames": 180,
+      "width": 1920,
+      "height": 1080,
+      "runtime": "native-svg"
+    },
+    {
+      "key": "seq-02",
+      "ids": [
+        "62a8e79f2fbc60001b684ca7",
+        "62a8de6d3c08b6003ef2bd77"
+      ],
+      "frames": 96,
+      "width": 2400,
+      "height": 5000,
+      "runtime": "native-svg"
+    },
+    {
+      "key": "seq-03",
+      "ids": [
+        "63208faf7c6b37001314640c"
+      ],
+      "frames": 300,
+      "width": 1280,
+      "height": 720,
+      "runtime": "occluded-unused"
+    },
+    {
+      "key": "seq-04",
+      "ids": [
+        "633ab5d57c16f8002f2d15f1"
+      ],
+      "frames": 41,
+      "width": 1770,
+      "height": 1000,
+      "runtime": "native-svg"
+    }
+  ]
+}

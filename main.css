@@ -1,0 +1,44 @@
+@font-face{font-family:custom_61267;src:url('./assets/main/custom_61267.ttf') format('truetype');font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:custom_61268;src:url('./assets/main/custom_61268.ttf') format('truetype');font-style:normal;font-weight:500;font-display:swap}
+@font-face{font-family:custom_61269;src:url('./assets/main/custom_61269.ttf') format('truetype');font-style:normal;font-weight:400;font-display:swap}
+
+.peep-main,.peep-main *{box-sizing:border-box}
+.peep-main{--pg-scale:1;position:relative;width:100%;height:calc(7629px * var(--pg-scale));min-height:1px;overflow:clip;background:#000;color:#fff;font-family:Arial,sans-serif;cursor:url('./assets/main/cursor.svg') 25 25,auto;-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision;isolation:isolate}
+.peep-main-stage{position:absolute;left:0;top:0;width:1024px;height:7629px;transform:scale(var(--pg-scale));transform-origin:0 0;background:#000;overflow:hidden}
+.peep-main-fixed{position:fixed;left:var(--pg-fixed-left,0px);top:var(--pg-fixed-top,0px);width:1024px;height:var(--pg-base-vh,560px);transform:scale(var(--pg-scale));transform-origin:0 0;pointer-events:none;z-index:50;overflow:visible}
+.peep-main-widget{position:absolute;margin:0;padding:0;border:0;transform-origin:50% 50%;will-change:transform,opacity}
+.peep-main-fixed .peep-main-widget{pointer-events:auto}
+.peep-main-widget[data-inert="true"]{pointer-events:none}
+.peep-main-text{overflow:visible;white-space:normal;font-synthesis:none}
+.peep-main-text .pg-line{display:block;margin:0;padding:0;min-height:1px;white-space:pre-wrap;overflow-wrap:normal;word-break:keep-all}
+.peep-main-text a,.peep-main-text button{font:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;text-decoration:none;background:none;border:0;padding:0;margin:0;cursor:url('./assets/main/cursor-hover.svg') 25 25,pointer}
+.peep-main-picture{overflow:visible}
+.peep-main-picture>img{display:block;width:100%;height:100%;max-width:none;object-fit:fill;user-select:none;-webkit-user-drag:none}
+.peep-main-shape{display:block}
+.peep-main-shape>.pg-shape-line{position:absolute;display:block;background:currentColor;pointer-events:none}
+.peep-main-shape.pg-horizontal>.pg-shape-line{left:0;right:0;top:50%;transform:translateY(-50%)}
+.peep-main-shape.pg-vertical>.pg-shape-line{top:0;bottom:0;left:50%;transform:translateX(-50%)}
+.peep-main-shots{overflow:hidden;background:transparent}
+.peep-main-interactive{cursor:url('./assets/main/cursor-hover.svg') 25 25,pointer}
+.peep-main-map-photo{opacity:0;pointer-events:none;transition:opacity .12s ease-in}
+.peep-main-map-photo.is-visible{opacity:1}
+.peep-main-intro{transition:opacity .3s ease-in-out,transform .3s ease-in-out}
+.peep-main.is-intro-dismissed .peep-main-intro{opacity:0!important;transform:translate3d(0,-1200px,0)!important;pointer-events:none!important}
+.peep-main-final-arrow{cursor:url('./assets/main/cursor-hover.svg') 25 25,pointer;transition:filter .15s ease,scale .3s ease-in}
+.peep-main-final-arrow:hover{scale:1.5}
+.peep-main-final-arrow>img{animation:pg-final-spin 4.9s linear infinite}
+@keyframes pg-final-spin{from{transform:translateY(0) rotate(0deg)}to{transform:translateY(-15px) rotate(365deg)}}
+.peep-main-loading{pointer-events:none}
+.peep-main-loading.is-playing{animation:pg-loading-bob .8s ease-in-out infinite alternate}
+@keyframes pg-loading-bob{from{transform:translateY(0)}to{transform:translateY(4px)}}
+.peep-main .pg-hidden{visibility:hidden}
+@media (prefers-reduced-motion:reduce){.peep-main-final-arrow>img,.peep-main-loading.is-playing{animation:none}}
+
+/* Requested contrast change, scoped to the green planning section. */
+.peep-main-planning-ink .pg-line,.peep-main-planning-ink .pg-shape-line,.peep-main[data-planning-ink="black"] .peep-main-language .pg-line{color:#000!important}
+
+/* Animated geometry remains native; static artwork uses the original source images. */
+.peep-main-picture>svg{display:block;width:100%;height:100%;max-width:none;user-select:none;pointer-events:none}
+.peep-main-vector-surface,.peep-main-vector-surface>svg{display:block;position:relative;width:100%;height:100%;overflow:hidden}
+.peep-main-final-arrow>svg{animation:pg-final-spin 4.9s linear infinite}
+@media (prefers-reduced-motion:reduce){.peep-main-final-arrow>svg{animation:none}}
